@@ -1,0 +1,37 @@
+def chuquan():
+    while Ture:
+        x = input('请输入您的出拳\n')
+        if x in ['石头','拳头','剪子','剪刀','包','布','帕子']:
+            if x in ['石头','拳头']:
+                chuquan == 0
+                y =shitou+1
+                break
+            if x in ['剪子','剪刀']:
+                chuquan == 1
+                jianzi=jianzi+1
+                break
+            if x in ['包','布','帕子']:
+                chuquan == 2
+                pazi =pazi+1
+                break
+        if x.count(".") ==1:#如果是小数就提醒输入整数的筹码
+            left,right = x.split(".")
+            if left.isdigit() and right.isdigit():
+                print('请输入整数的筹码\n')
+                
+            else:
+                continue
+        if x.isdigit():
+            xiazhu == int(x)
+            if xiazhu <= choumabao:
+              choumabao=choumabao-xiazhu
+              print('您输入的是{}个筹码,您剩余{}个筹码\n'.format（xiazhu,choumabao）)
+              continue
+            else: 
+              print('您输入的是{}个筹码多于您剩余{}个筹码\n'.format（xiazhu,choumabao）)
+              
+        else:
+             
+              
+chuquan()
+            
